@@ -1,0 +1,2 @@
+D:/learning_flutter/nti_task_two/android/app/.cxx/Debug/3p4j616u/x86/CMakeFiles/edit_cache.dir
+D:/learning_flutter/nti_task_two/android/app/.cxx/Debug/3p4j616u/x86/CMakeFiles/rebuild_cache.dir
