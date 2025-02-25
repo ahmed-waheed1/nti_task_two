@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nti_task_two/today_tasks.dart';
+import 'drop_down_buttom.dart';
+import 'profile_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       title: 'Flutter Demo',
-      home: TodayTasks(),
+      home: const ProfileView(),
     );
   }
 }

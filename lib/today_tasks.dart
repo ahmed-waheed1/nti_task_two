@@ -15,7 +15,7 @@ class TodayTasks extends StatelessWidget {
               Navigator.pop(context);
             },
           ),
-          title: Text('Today\'s Tasks'),
+          title: const Text('Today\'s Tasks'),
           centerTitle: true,
           actions: [
             Padding(
@@ -24,15 +24,16 @@ class TodayTasks extends StatelessWidget {
                 onTap: () {},
                 borderRadius: BorderRadius.circular(18),
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                   decoration: BoxDecoration(
-                    color: Color(0xFFCEEBDC),
+                    color: const Color(0xFFCEEBDC),
                     borderRadius: BorderRadius.circular(18),
                   ),
                   child: Row(
                     children: [
-                      Icon(Icons.add, color: Colors.black, size: 18),
-                      SizedBox(width: 4),
+                      const Icon(Icons.add, color: Colors.black, size: 18),
+                      const SizedBox(width: 4),
                       Text(
                         'Add',
                         textAlign: TextAlign.center,
@@ -52,12 +53,12 @@ class TodayTasks extends StatelessWidget {
         ),
         body: Column(
           children: [
-            SizedBox(height: 20),
-            CategorySelection(),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
+            const CategorySelection(),
+            const SizedBox(height: 20),
             Row(
               children: [
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 Text(
                   'Results',
                   textAlign: TextAlign.center,
@@ -68,13 +69,13 @@ class TodayTasks extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 Container(
                   width: 30,
                   height: 30,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: Color(0xFF149954),
+                    color: const Color(0xFF149954),
                     borderRadius: BorderRadius.circular(18),
                   ),
                   child: Text(
@@ -90,16 +91,16 @@ class TodayTasks extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Expanded(
               child: ListView.builder(
                 itemCount: 10,
                 itemBuilder: (context, index) {
                   return Card(
-                    margin: EdgeInsets.all(8),
+                    margin: const EdgeInsets.all(8),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
-                        side: BorderSide(
+                        side: const BorderSide(
                           color: Color(0xFFE5E5E5),
                           width: 1,
                         )),
@@ -117,7 +118,7 @@ class TodayTasks extends StatelessWidget {
                                   width: 30,
                                   'assets/work.svg',
                                 ),
-                                SizedBox(width: 10),
+                                const SizedBox(width: 10),
                                 Text(
                                   'Design Meeting',
                                   textAlign: TextAlign.center,
@@ -129,7 +130,7 @@ class TodayTasks extends StatelessWidget {
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Container(
                                   width: 70,
                                   height: 30,
@@ -137,7 +138,7 @@ class TodayTasks extends StatelessWidget {
                                   decoration: BoxDecoration(
                                       border: Border.all(color: Colors.black),
                                       borderRadius: BorderRadius.circular(18),
-                                      color: Color(0xFFF3F5F4)),
+                                      color: const Color(0xFFF3F5F4)),
                                   child: Text(
                                     'Future',
                                     textAlign: TextAlign.center,
@@ -150,12 +151,12 @@ class TodayTasks extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 8,
                                 ),
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 8,
                             ),
                             Text(
@@ -195,7 +196,7 @@ class CategorySelection extends StatelessWidget {
           height: 30,
           alignment: Alignment.center,
           decoration: BoxDecoration(
-            color: Color(0xFF149954),
+            color: const Color(0xFF149954),
             borderRadius: BorderRadius.circular(18),
           ),
           child: Text(
