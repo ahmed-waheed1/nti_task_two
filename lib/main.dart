@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'drop_down_buttom.dart';
-import 'profile_view.dart';
+
+import 'scroll_examples.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        useMaterial3: true,
         scaffoldBackgroundColor: const Color(0xFFE5E5E5),
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFFE5E5E5),
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       title: 'Flutter Demo',
-      home: const ProfileView(),
+      home: const PageOne(),
     );
   }
 }

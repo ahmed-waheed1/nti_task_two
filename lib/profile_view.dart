@@ -176,13 +176,13 @@ class CustomContainer extends StatelessWidget {
         children: [
           SvgPicture.asset(
             iconPath,
-            colorFilter: const ColorFilter.mode(
-              Colors.black,
-              BlendMode.srcIn,
-            ),
-            width: 50,
-            height: 50,
-            fit: BoxFit.fill,
+            // colorFilter: const ColorFilter.mode(
+            //   Colors.black,
+            //   BlendMode.srcIn,
+            // ),
+            width: 100,
+            height: 100,
+            // fit: BoxFit.fill,
           ),
           const SizedBox(width: 10),
           Text(title),
