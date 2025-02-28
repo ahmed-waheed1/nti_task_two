@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-
-import 'scroll_examples.dart';
+import 'todo_app/home_page.dart';
+import 'todo_app/new_user.dart';
+import 'todo_app/setting_page.dart';
+import 'todo_app/start_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,8 +25,12 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(color: Colors.black),
         ),
       ),
-      title: 'Flutter Demo',
-      home: const PageOne(),
+      // routes: {
+      //   '/': (context) => const StartPage(),
+      //   '/newUser': (context) => const NewUser(),
+      // },
+      title: 'Todo App',
+      home: const TaskGroupDropDown(),
     );
   }
 }
