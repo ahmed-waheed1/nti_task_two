@@ -39,8 +39,6 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               const SizedBox(height: 20),
-              const TaskGroupDropDown(),
-              const SizedBox(height: 20),
               Expanded(
                 child: _getContent(),
               ),
