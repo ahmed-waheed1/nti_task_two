@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'features/Home/presentation/pages/home_page.dart';
-import 'features/Home/presentation/pages/home_page_empty.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +31,7 @@ class MyApp extends StatelessWidget {
       // },
       title: 'Todo App',
       // initialRoute: '/',
-      home: const HomePageEmpty(),
+      home: const HomePage(),
     );
   }
 }
