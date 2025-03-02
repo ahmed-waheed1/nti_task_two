@@ -8,6 +8,7 @@ class UserCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        const SizedBox(width: 20),
         const CircleAvatar(
           backgroundColor: Color(0xFF24252C),
           radius: 30,

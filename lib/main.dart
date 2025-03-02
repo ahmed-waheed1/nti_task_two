@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'todo_app/home_page.dart';
-import 'todo_app/new_user.dart';
-import 'todo_app/setting_page.dart';
-import 'todo_app/start_page.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'features/Home/presentation/pages/home_page.dart';
+import 'features/Home/presentation/pages/home_page_empty.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: GoogleFonts.lexendDeca().fontFamily,
         useMaterial3: true,
         scaffoldBackgroundColor: const Color(0xFFE5E5E5),
         appBarTheme: const AppBarTheme(
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
       //   '/newUser': (context) => const NewUser(),
       // },
       title: 'Todo App',
-      home: const TaskGroupDropDown(),
+      // initialRoute: '/',
+      home: const HomePageEmpty(),
     );
   }
 }

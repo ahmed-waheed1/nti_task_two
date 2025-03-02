@@ -30,8 +30,10 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.8
   dropdown_button2: ^2.3.9
+  equatable: ^2.0.7
   flutter:
     sdk: flutter
+  flutter_bloc: ^9.0.0
   flutter_svg: null
   gap: ^3.0.1
   google_fonts: ^6.2.1
