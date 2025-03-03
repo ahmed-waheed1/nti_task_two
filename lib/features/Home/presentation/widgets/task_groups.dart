@@ -26,6 +26,7 @@ class TaskGroups extends StatelessWidget {
         const SizedBox(height: AppSize.s20),
         Expanded(
           child: ListView.builder(
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: StringManager.taskGroupsItems.length,
             itemBuilder: (context, index) {
               return TaskGroupsItem(

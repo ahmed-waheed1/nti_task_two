@@ -22,14 +22,21 @@ class SettingPage extends StatelessWidget {
       create: (context) => SettingPageCubit(),
       child: Scaffold(
         appBar: AppBar(
-          leadingWidth: AppSize.s35,
-          leading: InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: SvgPicture.asset(
-              AppImages.arrowBackIcon,
-            ),
+          leadingWidth: AppSize.s50,
+          leading: Row(
+            children: [
+              const SizedBox(width: AppSize.s10),
+              InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: SvgPicture.asset(
+                  AppImages.arrowBackIcon,
+                  height: AppSize.s35,
+                  width: AppSize.s35,
+                ),
+              ),
+            ],
           ),
           title: Text(
             StringManager.settings,

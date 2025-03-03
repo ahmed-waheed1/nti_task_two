@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../core/resources/app_size.dart';
 import '../../../onBoarding/presentation/widgets/user_card.dart';
 import '../widgets/add_icon.dart';
@@ -19,22 +20,30 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            Row(
-              children: [
-                UserCard(),
-                Spacer(),
-                AddIcon(),
-                SizedBox(width: AppSize.s20),
-              ],
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      UserCard(),
+                      Spacer(),
+                      AddIcon(),
+                      SizedBox(width: AppSize.s20),
+                    ],
+                  ),
+                  YourTodayTasks(),
+                  SizedBox(height: AppSize.s20),
+                  InProgressTasks(),
+                  TaskTypeContainerBuilder(),
+                  SizedBox(height: AppSize.s20),
+                ],
+              ),
             ),
-            YourTodayTasks(),
-            SizedBox(height: AppSize.s20),
-            InProgressTasks(),
-            TaskTypeContainerBuilder(),
-            SizedBox(height: AppSize.s20),
-            Expanded(child: TaskGroups()),
+            SliverFillRemaining(
+              child: TaskGroups(),
+            ),
           ],
         ),
       ),
