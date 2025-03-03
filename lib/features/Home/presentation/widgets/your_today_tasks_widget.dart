@@ -16,7 +16,7 @@ class YourTodayTasks extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppSize.s30),
         color: ColorManager.green54,
       ),
-      height: AppSize.s200,
+      height: AppSize.s170,
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../core/resources/app_size.dart';
-import '../../../../todo_app/user_card.dart';
+import '../../../onBoarding/presentation/widgets/user_card.dart';
 import '../widgets/add_icon.dart';
 import '../widgets/in_progress_tasks.dart';
 import '../widgets/task_groups.dart';

@@ -23,6 +23,7 @@ abstract class FontSizeManager {
   static const double s15 = 15;
   static const double s16 = 16;
   static const double s18 = 18;
+  static const double s19 = 19;
   static const double s20 = 20;
   static const double s22 = 22;
   static const double s24 = 24;
@@ -39,33 +40,39 @@ TextStyle getExtraLightStyle(
   );
 }
 
-TextStyle getRegularStyle(
-    {double fontSize = FontSizeManager.s12, Color color = Colors.black}) {
+TextStyle getRegularStyle({
+  required Color color,
+  required double fontSize,
+}) {
   return TextStyle(
-    fontFamily: StyleManager.fontFamily,
-    fontSize: fontSize,
     color: color,
-    fontWeight: FontWeightManager.regular,
+    fontSize: fontSize,
+    fontFamily: GoogleFonts.lexendDeca().fontFamily,
+    fontWeight: FontWeight.w400,
   );
 }
 
-TextStyle getMediumStyle(
-    {double fontSize = FontSizeManager.s12, Color color = Colors.black}) {
+TextStyle getMediumStyle({
+  required Color color,
+  required double fontSize,
+}) {
   return TextStyle(
-    fontFamily: StyleManager.fontFamily,
-    fontSize: fontSize,
     color: color,
-    fontWeight: FontWeightManager.medium,
+    fontSize: fontSize,
+    fontFamily: GoogleFonts.lexendDeca().fontFamily,
+    fontWeight: FontWeight.w500,
   );
 }
 
-TextStyle getLightStyle(
-    {double fontSize = FontSizeManager.s12, Color color = Colors.black}) {
+TextStyle getLightStyle({
+  required Color color,
+  required double fontSize,
+}) {
   return TextStyle(
-    fontFamily: StyleManager.fontFamily,
-    fontSize: fontSize,
     color: color,
-    fontWeight: FontWeightManager.light,
+    fontSize: fontSize,
+    fontFamily: GoogleFonts.lexendDeca().fontFamily,
+    fontWeight: FontWeight.w300,
   );
 }
 

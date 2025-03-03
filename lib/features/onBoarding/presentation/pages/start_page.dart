@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:logger/web.dart';
+import 'package:logger/logger.dart';
 
-import 'image_paths.dart';
+import '../../../../core/resources/app_images.dart';
+import '../../../../core/resources/app_padding.dart';
+import '../../../../core/resources/app_size.dart';
+import '../../../../core/resources/color_manager.dart';
+import '../../../../core/resources/string_manager.dart';
+import '../../../../core/resources/style_manager.dart';
 
 class StartPage extends StatefulWidget {
   const StartPage({super.key});
@@ -15,53 +19,50 @@ class StartPage extends StatefulWidget {
 
 class _StartPageState extends State<StartPage> {
   Logger logger = Logger();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: AppPadding.p20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset(
-              ImagePaths.startIcon,
+              AppImages.startIcon,
             ),
-            const Gap(70),
+            const Gap(AppSize.s70),
             Text(
-              'Welcome To \n Do It !',
+              StringManager.welcomeMessage,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                color: const Color(0xFF24252C),
-                fontSize: 24,
-                fontFamily: GoogleFonts.lexendDeca().fontFamily,
-                fontWeight: FontWeight.w400,
+              style: getRegularStyle(
+                color: ColorManager.black2c,
+                fontSize: FontSizeManager.s24,
               ),
             ),
-            const Gap(50),
+            const Gap(AppSize.s50),
             Text(
-              'Ready to conquer your tasks? Let\'s Do It together.',
+              StringManager.readyMessage,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                color: const Color(0xFF6E6A7C),
-                fontSize: 16,
-                fontFamily: GoogleFonts.lexendDeca().fontFamily,
-                fontWeight: FontWeight.w500,
+              style: getMediumStyle(
+                color: ColorManager.grey7c,
+                fontSize: FontSizeManager.s16,
               ),
             ),
-            const Gap(50),
+            const Gap(AppSize.s50),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  shadowColor: const Color(0xff149954),
+                  shadowColor: ColorManager.green54,
                   elevation: 10,
-                  backgroundColor: const Color(0xFF149954),
+                  backgroundColor: ColorManager.green54,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(AppSize.s10),
                   ),
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 40,
-                    vertical: 15,
+                    horizontal: AppPadding.p40,
+                    vertical: AppPadding.p15,
                   ),
                 ),
                 onPressed: () {
@@ -69,13 +70,11 @@ class _StartPageState extends State<StartPage> {
                   Navigator.pushNamed(context, '/newUser');
                 },
                 child: Text(
-                  'Let\'s Start',
+                  StringManager.letsStart,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 19,
-                    fontFamily: GoogleFonts.lexendDeca().fontFamily,
-                    fontWeight: FontWeight.w300,
+                  style: getLightStyle(
+                    color: ColorManager.white,
+                    fontSize: FontSizeManager.s19,
                   ),
                 ),
               ),

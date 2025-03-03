@@ -4,8 +4,12 @@ import '../../features/Home/presentation/models/task_type_container_model.dart';
 import 'app_images.dart';
 import 'color_manager.dart';
 
-abstract class StringManager {
+class StringManager {
   static const String appName = 'Do It';
+  static const String updateUser = 'Update Profile';
+  static const String settings = 'Settings';
+  static const String notifications = 'Notifications';
+  static const String enableCloud = 'Enable Cloud';
   static const String taskGroupDropDownHint = 'Select Task Group';
   static const String taskGroupDropDownErrorMessage =
       'Please select task group';
@@ -26,6 +30,16 @@ abstract class StringManager {
       'Add new feature for Do It app and commit it';
   static const String noTasks =
       'There are no tasks yet,\nPress the button\nTo add New Task ';
+  static const String welcomeMessage = 'Welcome To \n Do It !';
+  static const String readyMessage =
+      'Ready to conquer your tasks? Let\'s Do It together.';
+  static const String letsStart = 'Let\'s Start';
+  static const String hello = 'Hello!';
+  static const String userName = 'Ahmed Saber';
+  static const String enterName = 'Please enter your name';
+  static const String yourName = 'Your Name';
+  static const String typeYourName = 'type your name here';
+  static const String save = 'Save';
   static List<TaskTypeContainerModel> taskTypeContainerModelItems = [
     TaskTypeContainerModel(
       title: workTask,
@@ -38,7 +52,7 @@ abstract class StringManager {
       subTitle: personalTaskTitle,
       color: ColorManager.lightGreenaB,
       iconPath: AppImages.personalIcon,
-      titleColor: ColorManager.grey7C,
+      titleColor: ColorManager.grey7c,
       subTitleColor: ColorManager.black2c,
     ),
     TaskTypeContainerModel(
@@ -46,7 +60,7 @@ abstract class StringManager {
       subTitle: homeTaskTitle,
       color: ColorManager.lightPink,
       iconPath: AppImages.homeIcon,
-      titleColor: ColorManager.grey7C,
+      titleColor: ColorManager.grey7c,
       subTitleColor: ColorManager.black2c,
     ),
   ];
