@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'core/resources/color_manager.dart';
 import 'features/Home/presentation/pages/home_page.dart';
 import 'features/Home/presentation/pages/home_page_empty.dart';
 import 'features/Home/presentation/pages/user_profile_view.dart';
@@ -22,11 +23,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: GoogleFonts.lexendDeca().fontFamily,
         useMaterial3: true,
-        scaffoldBackgroundColor: const Color(0xFFE5E5E5),
+        scaffoldBackgroundColor: ColorManager.scaffoldBackGround,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFFE5E5E5),
+          backgroundColor: ColorManager.scaffoldBackGround,
           elevation: 0,
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: IconThemeData(color: ColorManager.black),
         ),
       ),
       initialRoute: '/start',
