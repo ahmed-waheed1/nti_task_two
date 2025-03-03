@@ -5,6 +5,7 @@ import 'app_images.dart';
 import 'color_manager.dart';
 
 abstract class StringManager {
+  static const String appName = 'Do It';
   static const String taskGroupDropDownHint = 'Select Task Group';
   static const String taskGroupDropDownErrorMessage =
       'Please select task group';
@@ -73,10 +74,8 @@ abstract class StringManager {
     ),
   ];
   static List<TaskGroupItem> taskGroupDropDownList = [
-    TaskGroupItem(name: 'All', iconPath: 'assets/icons/home.svg'),
-    TaskGroupItem(name: 'Work', iconPath: 'assets/icons/work.svg'),
-    TaskGroupItem(name: 'Personal', iconPath: 'assets/icons/personal.svg'),
-    TaskGroupItem(name: 'Shopping', iconPath: 'assets/icons/shopping.svg'),
-    TaskGroupItem(name: 'Study', iconPath: 'assets/icons/study.svg'),
+    TaskGroupItem(name: 'Work', iconPath: AppImages.workIcon),
+    TaskGroupItem(name: 'Home', iconPath: AppImages.homeIcon),
+    TaskGroupItem(name: 'Personal', iconPath: AppImages.personalIcon),
   ];
 }

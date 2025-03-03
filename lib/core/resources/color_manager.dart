@@ -8,6 +8,7 @@ abstract class ColorManager {
   // static const Color secondaryLight = Color(0xFF66FFF9);
   // static const Color secondaryDark = Color(0xFF00BFA5);
   static const Color green54 = Color(0xFF149954);
+  static const Color scaffoldBackGround = Color(0xFFE5E5E5);
   static const Color lightGreen = Color(0xFFD2E7DC);
   static const Color lightGreenaB = Color(0xFFCEEADB);
   static const Color white = Color(0xFFFFFFFF);
